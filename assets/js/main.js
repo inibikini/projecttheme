@@ -1,5 +1,6 @@
 import './menu.js';
 import './filter-section.js';
+import './enter-text.js';
 
 class General {
 	constructor() {

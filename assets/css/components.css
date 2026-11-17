@@ -222,6 +222,175 @@ html[data-color-mode="dark"] #content {
   color: #f1f1f1;
 }
 
+/*** Font Sample Input ***/
+
+.enter-text {
+  background-color: #0c0c0c;
+  border: 1px solid #494949;
+  color: #f1f1f1;
+  font-family: var(--theme-font-family-body);
+}
+
+.enter-text__inner {
+  align-items: center;
+  display: flex;
+  min-height: 115px;
+  padding: 1.5rem clamp(1.25rem, 3vw, 3rem);
+}
+
+.enter-text__input {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  font-size: 1rem;
+  outline: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.enter-text__input::placeholder {
+  color: currentColor;
+  opacity: 0.5;
+}
+
+.enter-text__input:focus-visible {
+  outline: 0;
+}
+
+html[data-color-mode="light"] .enter-text {
+  background-color: #f1f1f1;
+  color: #202020;
+}
+
+[data-font-sample] {
+  overflow-wrap: anywhere;
+}
+
+/*** Font Cards ***/
+
+.font-card {
+  align-items: center;
+  background-color: #1b2433;
+  border: 1px solid rgba(200, 207, 221, 0.6);
+  border-radius: 1.5rem;
+  color: var(--theme-color-whiteblue);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: 360px;
+  overflow: hidden;
+  padding: clamp(2rem, 6vw, 4.5rem);
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.font-card::after {
+  background: linear-gradient(rgba(8, 15, 27, 0.28), rgba(8, 15, 27, 0.55));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.font-card__background {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.font-card__content {
+  max-width: 700px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.font-card__name {
+  color: inherit;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+}
+
+.font-card--general-sans .font-card__name {
+  font-family: "General Sans", sans-serif;
+}
+
+.font-card--moonhouse .font-card__name {
+  font-family: "Moonhouse", sans-serif;
+}
+
+.font-card--foglihten-no04 .font-card__name {
+  font-family: "FoglihtenNo04", serif;
+}
+
+.font-card--tanker .font-card__name {
+  font-family: "Tanker", sans-serif;
+}
+
+.font-card__description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 auto 1.5rem;
+  max-width: 420px;
+}
+
+.font-card__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.font-card__button {
+  border: 1px solid rgba(200, 207, 221, 0.7);
+  border-radius: 999px;
+  color: var(--theme-color-white);
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+  justify-content: center;
+  min-width: 120px;
+  padding: 0.55rem 1rem;
+  transition: var(--theme-transition);
+}
+
+.font-card__button--primary {
+  background-color: var(--theme-color-white);
+  border-color: var(--theme-color-white);
+  color: var(--theme-color-black-300);
+}
+
+.font-card__button:hover,
+.font-card__button:focus-visible {
+  opacity: 0.8;
+}
+
+html[data-color-mode="light"] .font-card {
+  color: #202020;
+}
+
+html[data-color-mode="light"] .font-card::after {
+  background: linear-gradient(rgba(236, 238, 242, 0.3), rgba(236, 238, 242, 0.62));
+}
+
+html[data-color-mode="light"] .font-card__button {
+  color: #202020;
+}
+
+html[data-color-mode="light"] .font-card__button--primary {
+  background-color: #202020;
+  border-color: #202020;
+  color: #fff;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .page-header__video {
     display: none;

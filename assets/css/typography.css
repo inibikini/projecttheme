@@ -35,6 +35,27 @@ src: url('../fonts/GeneralSans-Light.otf') format('opentype');
   src: url('../fonts/GeneralSans-Semibold.otf') format('opentype');
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "Moonhouse";
+  font-weight: 400;
+  src: url('../fonts/Moonhouse-yE5M.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "FoglihtenNo04";
+  font-weight: 400;
+  src: url('../fonts/Foglihtenno04-aM2E.otf') format('opentype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Tanker";
+  font-weight: 400;
+  src: url('../fonts/Tanker-Regular.otf') format('opentype');
+}
+
 /*
  * Typography
  */
@@ -85,4 +106,3 @@ a:active {
   line-height: 1.5;
   margin-bottom: 2rem;
 }
-

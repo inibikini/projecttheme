@@ -14,8 +14,8 @@ while (have_rows('page_modules')) : the_row();
   // Section-Optionen 
   $opts = [
     'name'       => $layout,
-    'container'  => in_array($layout, ['header', 'filter_section'], true) ? 'none' : (get_sub_field('container') ?: 'container-lg'),
-    'padding_y'  => in_array($layout, ['header', 'filter_section'], true) ? 'py-0' : (get_sub_field('padding_y') ?: 'py-5'),
+    'container'  => in_array($layout, ['header', 'filter_section', 'enter_text'], true) ? 'none' : (get_sub_field('container') ?: 'container-lg'),
+    'padding_y'  => in_array($layout, ['header', 'filter_section', 'enter_text'], true) ? 'py-0' : (get_sub_field('padding_y') ?: 'py-5'),
     'bg'         => get_sub_field('background') ?: 'none',
     'id'         => get_sub_field('id-anchor') ?: '',
     'show_on'    => get_sub_field('show-on') ?: 'everywhere',
@@ -34,6 +34,9 @@ while (have_rows('page_modules')) : the_row();
   }
 
   switch ($layout) {
+    case 'enter_text':
+      get_template_part('template-parts/flex/layout', 'enter-text'); break;
+
     case 'filter_section':
       get_template_part('template-parts/flex/layout', 'filter-section'); break;
 
