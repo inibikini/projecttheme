@@ -634,6 +634,192 @@ html[data-color-mode="light"] .share-fonts__button:focus-visible {
   color: inherit;
 }
 
+/*** About Module ***/
+
+.about {
+  background-color: #000;
+  color: #cbd2e0;
+}
+
+.about-module {
+  align-items: start;
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  min-height: 300px;
+  padding: clamp(1.25rem, 2.25vw, 2rem);
+}
+
+.about-module__title {
+  color: inherit;
+  font-family: "General Sans", sans-serif;
+  font-size: clamp(3.5rem, 7vw, 5rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0;
+}
+
+.about-module__description {
+  font-family: "General Sans", sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.about-module__description > :first-child {
+  margin-top: 0;
+}
+
+.about-module__description > :last-child {
+  margin-bottom: 0;
+}
+
+.about-module__description strong {
+  font-weight: 600;
+}
+
+html[data-color-mode="light"] .about {
+  background-color: #000;
+  color: #cbd2e0;
+}
+
+/*** Find Your Match Heading ***/
+
+.fym_heading {
+  background-color: #f1f1f1;
+  color: #000;
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.fym_heading > .container-lg {
+  max-width: none;
+  padding-left: clamp(1.25rem, 3.5vw, 50px);
+  padding-right: clamp(1.25rem, 3.5vw, 50px);
+}
+
+.fym-heading {
+  align-items: center;
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 660px) minmax(0, 400px);
+  justify-content: center;
+  margin-inline: auto;
+  max-width: 1200px;
+  min-height: 300px;
+  padding: clamp(1.25rem, 2.25vw, 2rem);
+}
+
+.fym-heading__title {
+  color: inherit;
+  font-family: "General Sans", sans-serif;
+  font-size: clamp(3rem, 4.5vw, 4.25rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+
+.fym-heading__description {
+  font-family: "General Sans", sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  font-weight: 300;
+  line-height: 1.4;
+  justify-self: start;
+  max-width: 400px;
+  text-align: left;
+  width: 100%;
+}
+
+.fym-heading__description > :first-child {
+  margin-top: 0;
+}
+
+.fym-heading__description > :last-child {
+  margin-bottom: 0;
+}
+
+.fym-heading__description strong {
+  font-weight: 600;
+}
+
+html[data-color-mode="light"] .fym_heading {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+/*** Find Your Match Font Card ***/
+
+.fym_card {
+  background-color: #111b2b;
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.fym-card {
+  align-items: center;
+  background-color: #26344a;
+  border: 1px solid rgba(200, 207, 221, 0.75);
+  border-radius: 2rem;
+  color: #cbd2e0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 310px;
+  min-height: 306px;
+  overflow: hidden;
+  padding: 1.5rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.fym-card__background {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.fym-card__content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.fym-card__font-name,
+.fym-card__sample {
+  color: inherit;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.fym-card__font-name {
+  margin-bottom: 0.15rem;
+}
+
+.fym-card.font-card--general-sans .fym-card__content {
+  font-family: "General Sans", sans-serif;
+}
+
+.fym-card.font-card--moonhouse .fym-card__content {
+  font-family: "Moonhouse", sans-serif;
+}
+
+.fym-card.font-card--foglihten-no04 .fym-card__content {
+  font-family: "FoglihtenNo04", serif;
+}
+
+.fym-card.font-card--tanker .fym-card__content {
+  font-family: "Tanker", sans-serif;
+}
+
 /*** Share Fonts Contact Form ***/
 
 .share_fonts_form {
@@ -954,6 +1140,26 @@ html[data-color-mode="light"] .font-card__button--primary {
 }
 
 @media (max-width: 767px) {
+  .about-module {
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .fym-heading {
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .fym-heading__description {
+    justify-self: center;
+  }
+
+  .fym-heading__title {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+
   .share-fonts-form__panel {
     grid-template-columns: minmax(0, 1fr);
   }

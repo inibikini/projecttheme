@@ -103,6 +103,9 @@ while (have_rows('page_modules')) : the_row();
     case 'share_fonts_form':
       get_template_part('template-parts/flex/layout', 'share-fonts-form'); break;
 
+    case 'fym_heading':
+      get_template_part('template-parts/flex/layout', 'fym-heading'); break;
+
     case 'footer':
       get_template_part('template-parts/flex/layout', 'footer'); break;
 
