@@ -270,6 +270,76 @@ html[data-color-mode="light"] .enter-text {
 
 /*** Font Cards ***/
 
+.font-box-grid {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.font-box {
+  aspect-ratio: 1.12 / 1;
+  background-color: #000;
+  border: 1px solid rgba(200, 207, 221, 0.75);
+  border-radius: 1.5rem;
+  color: #cbd2e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.font-box[data-font-family="josefin-slab"] {
+  font-family: "Josefin Slab", Georgia, serif;
+}
+
+.font-box[data-font-family="departure-mono"] {
+  font-family: "Departure Mono", ui-monospace, monospace;
+}
+
+.font-box[data-font-family="alex-brush"] {
+  font-family: "Alex Brush", cursive;
+}
+
+.font-box[data-font-family="gluten"] {
+  font-family: "Gluten", sans-serif;
+}
+
+.font-box[data-font-family="chillax"] {
+  font-family: "Chillax", sans-serif;
+}
+
+.font-box[data-font-family="bullpen"] {
+  font-family: "Bullpen", sans-serif;
+}
+
+.font-box__name {
+  color: inherit;
+  font-family: inherit;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.font-box__sample {
+  color: inherit;
+  font-family: inherit;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+html[data-color-mode="light"] .font-box {
+  background-color: #f1f1f1;
+  border-color: rgba(32, 32, 32, 0.6);
+  color: #202020;
+}
+
 .font-card {
   align-items: center;
   background-color: #1b2433;
@@ -398,6 +468,10 @@ html[data-color-mode="light"] .font-card__button--primary {
 }
 
 @media (max-width: 480px) {
+  .font-box-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .filter-section__inner {
     align-items: flex-start;
     flex-direction: column;
@@ -412,6 +486,12 @@ html[data-color-mode="light"] .font-card__button--primary {
 
   .filter-section__mode {
     align-self: flex-end;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 991px) {
+  .font-box-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

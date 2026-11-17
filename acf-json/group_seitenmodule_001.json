@@ -826,6 +826,7 @@
                             "rows_per_page": 20,
                             "button_label": "Add Row",
                             "collapsed": "",
+                            "acfe_repeater_stylised_button": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_box_image",
@@ -915,8 +916,7 @@
                                     "return_format": "array",
                                     "parent_repeater": "field_boxes_items"
                                 }
-                            ],
-                            "acfe_repeater_stylised_button": 0
+                            ]
                         },
                         {
                             "key": "field_boxes_cols",
@@ -1057,6 +1057,7 @@
                             "rows_per_page": 20,
                             "button_label": "Add Row",
                             "collapsed": "",
+                            "acfe_repeater_stylised_button": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_tab_title",
@@ -1100,8 +1101,7 @@
                                     "delay": 0,
                                     "parent_repeater": "field_tabs_items"
                                 }
-                            ],
-                            "acfe_repeater_stylised_button": 0
+                            ]
                         }
                     ],
                     "min": "",
@@ -1143,6 +1143,7 @@
                             "rows_per_page": 20,
                             "button_label": "Add Row",
                             "collapsed": "",
+                            "acfe_repeater_stylised_button": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_acc_title",
@@ -1186,8 +1187,7 @@
                                     "delay": 0,
                                     "parent_repeater": "field_acc_items"
                                 }
-                            ],
-                            "acfe_repeater_stylised_button": 0
+                            ]
                         },
                         {
                             "key": "field_acc_first_open",
@@ -1522,7 +1522,9 @@
                             "allow_in_bindings": 0,
                             "ui": 1,
                             "ajax": 0,
-                            "placeholder": ""
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         },
                         {
                             "key": "field_6af60ce54817d",
@@ -1546,14 +1548,16 @@
                                 "serif": "Serif",
                                 "slab": "Slab"
                             },
-                            "default_value": "",
+                            "default_value": false,
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 1,
                             "allow_in_bindings": 0,
                             "ui": 1,
                             "ajax": 0,
-                            "placeholder": ""
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         },
                         {
                             "key": "field_6af60d894817c",
@@ -1634,6 +1638,137 @@
                             "mime_types": "",
                             "uploader": "",
                             "acfe_thumbnail": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Interaktive Elemente"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
+                "layout_font_box": {
+                    "key": "layout_font_box",
+                    "name": "font_box",
+                    "label": "Font Box",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_font_box_fonts",
+                            "label": "Font Boxes",
+                            "name": "fonts",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Leave empty to show the six default fonts. Add rows to customize the font names and filter categories.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_font_box_name",
+                            "button_label": "Add Font Box",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_font_box_name",
+                                    "label": "Font Name",
+                                    "name": "font_name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_font_box_family",
+                                    "label": "Font",
+                                    "name": "font_family",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "Select the font used for the font name and its sample.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "josefin-slab": "Josefin Slab",
+                                        "departure-mono": "Departure Mono",
+                                        "alex-brush": "Alex Brush",
+                                        "gluten": "Gluten",
+                                        "chillax": "Chillax",
+                                        "bullpen": "Bullpen"
+                                    },
+                                    "default_value": "chillax",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 1,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0
+                                },
+                                {
+                                    "key": "field_font_box_category",
+                                    "label": "Font Category",
+                                    "name": "font_category",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "Used by the Filter Section and preview fallback styles.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "cursive": "Cursive",
+                                        "display": "Display",
+                                        "monospace": "Monospace",
+                                        "sans-serif": "Sans Serif",
+                                        "serif": "Serif",
+                                        "slab": "Slab"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 1,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -1795,6 +1930,7 @@
                             "rows_per_page": 20,
                             "button_label": "Add Category",
                             "collapsed": "field_filter_section_category_label",
+                            "allow_in_bindings": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_filter_section_category_label",
@@ -1840,8 +1976,7 @@
                                     "append": "",
                                     "parent_repeater": "field_filter_section_categories"
                                 }
-                            ],
-                            "allow_in_bindings": 0
+                            ]
                         },
                         {
                             "key": "field_filter_section_default_mode",
@@ -1868,7 +2003,9 @@
                             "allow_in_bindings": 0,
                             "ui": 1,
                             "ajax": 0,
-                            "placeholder": ""
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
                         }
                     ],
                     "min": "",
@@ -1987,7 +2124,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "all"
+                "value": "page"
             }
         ]
     ],
@@ -2009,10 +2146,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe": {
-        "autosync": [
-            "json"
-        ]
-    },
-    "modified": 1794911901
+    "modified": 1794928958
 }

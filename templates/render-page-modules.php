@@ -93,6 +93,9 @@ while (have_rows('page_modules')) : the_row();
 
       case 'font_section':
       get_template_part('template-parts/flex/layout', 'font-section'); break;
+
+    case 'font_box':
+      get_template_part('template-parts/flex/layout', 'font-box'); break;
   }
 
   if (function_exists('section_close')) {
