@@ -1767,8 +1767,123 @@
                                     "placeholder": "",
                                     "create_options": 0,
                                     "save_options": 0
+                                },
+                                {
+                                    "key": "field_font_box_website",
+                                    "label": "Website",
+                                    "name": "website",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Link the entire font box to the font's website. Leave empty to link to a Google Fonts search for the font name.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
                                 }
                             ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Interaktive Elemente"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
+                "layout_share_fonts": {
+                    "key": "layout_share_fonts",
+                    "name": "share_fonts",
+                    "label": "Share Fonts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_share_fonts_title",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Share your favourite fonts with us!",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_share_fonts_description",
+                            "label": "Description",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "WHAT’S YOUR TYPE can only work together with you, the font-loving community! That’s why you can send us typography suggestions that might be featured on this website in the future.",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "rows": 4,
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_share_fonts_prompt",
+                            "label": "Prompt",
+                            "name": "prompt",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "So click the button and tell us your type secrets.",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_share_fonts_cta",
+                            "label": "Button Link",
+                            "name": "cta",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Leave empty to link to the Share Fonts page.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -2146,5 +2261,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1794928958
+    "modified": 1794943341
 }

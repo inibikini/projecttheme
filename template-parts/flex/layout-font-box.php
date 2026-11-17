@@ -31,6 +31,7 @@ $font_families = ['josefin-slab', 'departure-mono', 'alex-brush', 'gluten', 'chi
     $font_name = isset($font['font_name']) ? trim($font['font_name']) : '';
     $font_category = isset($font['font_category']) ? sanitize_title($font['font_category']) : '';
     $font_family = isset($font['font_family']) ? sanitize_title($font['font_family']) : '';
+    $website = isset($font['website']) && is_array($font['website']) ? $font['website'] : [];
     if (!in_array($font_family, $font_families, true)) {
       $font_family = $category_font_defaults[$font_category] ?? 'chillax';
     }
@@ -38,12 +39,15 @@ $font_families = ['josefin-slab', 'departure-mono', 'alex-brush', 'gluten', 'chi
     if (!$font_name) {
       continue;
     }
+
+    $website_url = !empty($website['url']) ? $website['url'] : add_query_arg('query', $font_name, 'https://fonts.google.com/');
+    $website_target = !empty($website['target']) ? $website['target'] : '_self';
   ?>
-    <article class="font-box" data-font-family="<?php echo esc_attr($font_family); ?>"<?php if ($font_category) : ?> data-font-category="<?php echo esc_attr($font_category); ?>"<?php endif; ?>>
+    <a class="font-box" href="<?php echo esc_url($website_url); ?>" target="<?php echo esc_attr($website_target); ?>"<?php if ($website_target === '_blank') : ?> rel="noopener noreferrer"<?php endif; ?> aria-label="<?php echo esc_attr(sprintf(__('Explore the %s font website', 'projecttheme'), $font_name)); ?>" data-font-family="<?php echo esc_attr($font_family); ?>"<?php if ($font_category) : ?> data-font-category="<?php echo esc_attr($font_category); ?>"<?php endif; ?>>
       <h2 class="font-box__name" data-font-sample data-original-text="<?php echo esc_attr($font_name); ?>">
         <?php echo esc_html($font_name); ?>
       </h2>
       <p class="font-box__sample" data-font-sample data-original-text="Aa">Aa</p>
-    </article>
+    </a>
   <?php endforeach; ?>
 </div>
