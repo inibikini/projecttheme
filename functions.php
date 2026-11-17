@@ -28,6 +28,10 @@ include( 'configure/shortcodes.php' );
 
 include( 'configure/acf.php' );
 
+// SHARE FONTS FORM
+
+include( 'configure/share-fonts.php' );
+
 // PLUGIN SETUP
 
 include( 'configure/plugins.php' );

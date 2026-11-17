@@ -634,6 +634,138 @@ html[data-color-mode="light"] .share-fonts__button:focus-visible {
   color: inherit;
 }
 
+/*** Share Fonts Contact Form ***/
+
+.share_fonts_form {
+  background-color: #000;
+  color: #cbd2e0;
+  padding-bottom: clamp(2rem, 3vw, 3rem);
+  padding-top: clamp(2rem, 3vw, 3rem);
+}
+
+.share-fonts-form__panel {
+  border: 2px solid #69799a;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.share-fonts-form__title {
+  color: inherit;
+  font-family: "General Sans", sans-serif;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0;
+}
+
+.share-fonts-form__fields {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.share-fonts-form__field {
+  border-bottom: 1px solid rgba(203, 210, 224, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.35rem 0 0.55rem;
+}
+
+.share-fonts-form__field label,
+.share-fonts-form__field input,
+.share-fonts-form__field textarea {
+  color: inherit;
+  font-family: "General Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.share-fonts-form__field label {
+  margin: 0;
+}
+
+.share-fonts-form__field label span {
+  margin-left: 0.1rem;
+}
+
+.share-fonts-form__field input,
+.share-fonts-form__field textarea {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  padding: 0;
+  resize: vertical;
+  width: 100%;
+}
+
+.share-fonts-form__field input::placeholder,
+.share-fonts-form__field textarea::placeholder {
+  color: inherit;
+  opacity: 0.65;
+}
+
+.share-fonts-form__field input:focus-visible,
+.share-fonts-form__field textarea:focus-visible {
+  outline: 1px solid #cbd2e0;
+  outline-offset: 3px;
+}
+
+.share-fonts-form__submit-panel {
+  align-items: center;
+  border: 2px solid #69799a;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  min-height: 106px;
+  padding: 1.25rem clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.share-fonts-form__notice {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 560px;
+  text-align: right;
+}
+
+.share-fonts-form__feedback {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.share-fonts-form__button {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  color: #202020;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "General Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-width: 112px;
+  padding: 0.65rem 1.5rem;
+  transition: var(--theme-transition);
+}
+
+.share-fonts-form__button:hover,
+.share-fonts-form__button:focus-visible {
+  background-color: transparent;
+  color: inherit;
+}
+
+html[data-color-mode="light"] .share_fonts_form {
+  background-color: #000;
+  color: #cbd2e0;
+}
+
 .font-card {
   align-items: center;
   background-color: #1b2433;
@@ -781,6 +913,15 @@ html[data-color-mode="light"] .font-card__button--primary {
     gap: 1.5rem;
   }
 
+  .share-fonts-form__submit-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .share-fonts-form__notice {
+    text-align: left;
+  }
+
   .filter-section__inner {
     align-items: flex-start;
     flex-direction: column;
@@ -805,6 +946,16 @@ html[data-color-mode="light"] .font-card__button--primary {
 
   .font-details__gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .share-fonts-form__panel {
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .share-fonts-form__panel {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
