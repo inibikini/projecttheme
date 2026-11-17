@@ -1,0 +1,28 @@
+/*
+ * Constants
+ *
+ * Keep colors and reusable theme values here.
+ */
+:root {
+  --theme-color-white: white;
+  --theme-color-whiteblue: #C8CFDD;
+   --theme-color-whiteblue-300: #8C96AB;
+    --theme-color-whiteblue-400: #69799A;
+     --theme-color-whiteblue-500: #405173;
+      --theme-color-white: white;
+  --theme-color-black: #000000;
+   --theme-color-black-400: #19191A;
+    --theme-color-black-300: #1C1D1E;
+     --theme-color-black-200: #1E1F21;
+          --theme-color-black-100: #222426;
+    --theme-color-background-light:#C8CFDD;
+    --theme-color-background-dark: black;
+  --theme-transition: all 0.3s ease-in-out;
+
+  --theme-font-family-body: "General Sans", sans-serif;
+
+  --theme-font-size-base: 1rem;
+  --theme-font-size-body: 1.5;
+  --theme-font-size-heading: 2;
+}
+
