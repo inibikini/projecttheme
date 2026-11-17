@@ -1,4 +1,5 @@
 import './menu.js';
+import './filter-section.js';
 
 class General {
 	constructor() {

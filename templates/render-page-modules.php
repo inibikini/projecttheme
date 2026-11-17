@@ -9,12 +9,13 @@ if (!function_exists('have_rows') || !have_rows('page_modules')) {
 }
 
 while (have_rows('page_modules')) : the_row();
+  $layout = get_row_layout();
 
   // Section-Optionen 
   $opts = [
-    'name'       => get_row_layout(),
-    'container'  => get_sub_field('container') ?: 'container-lg',
-    'padding_y'  => get_sub_field('padding_y') ?: 'py-5',
+    'name'       => $layout,
+    'container'  => in_array($layout, ['header', 'filter_section'], true) ? 'none' : (get_sub_field('container') ?: 'container-lg'),
+    'padding_y'  => in_array($layout, ['header', 'filter_section'], true) ? 'py-0' : (get_sub_field('padding_y') ?: 'py-5'),
     'bg'         => get_sub_field('background') ?: 'none',
     'id'         => get_sub_field('id-anchor') ?: '',
     'show_on'    => get_sub_field('show-on') ?: 'everywhere',
@@ -32,7 +33,13 @@ while (have_rows('page_modules')) : the_row();
     if ($cont !== 'none') echo '<div class="'.$cont.'">';
   }
 
-  switch (get_row_layout()) {
+  switch ($layout) {
+    case 'filter_section':
+      get_template_part('template-parts/flex/layout', 'filter-section'); break;
+
+    case 'header':
+      get_template_part('template-parts/flex/layout', 'header'); break;
+
     case 'intro':
       get_template_part('template-parts/flex/layout', 'intro'); break;
 
