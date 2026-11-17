@@ -476,6 +476,81 @@ html[data-color-mode="light"] .font-box {
   color: #202020;
 }
 
+/*** Font Details Gallery ***/
+
+.font_details {
+  background-color: var(--theme-color-background-dark);
+  color: var(--theme-color-whiteblue);
+}
+
+.font-details__title {
+  align-items: center;
+  color: #cbd2e0;
+  display: flex;
+  font-family: "General Sans", sans-serif;
+  font-size: clamp(2.5rem, 3.75vw, 3.125rem);
+  font-weight: 300;
+  justify-content: center;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  min-height: 131px;
+  padding: 1rem;
+}
+
+.font-details__gallery {
+  display: grid;
+  gap: clamp(0.5rem, 1.25vw, 1rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.font-details__item {
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(200, 207, 221, 0.6);
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.font-details__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.font-details__actions {
+  align-items: center;
+  display: flex;
+  min-height: 143px;
+  padding: 1.5rem 2.5rem;
+}
+
+.font-details__button {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  color: #202020;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.2;
+  min-height: 40px;
+  padding: 0.625rem 1.5rem;
+  text-decoration: none;
+  transition: var(--theme-transition);
+}
+
+.font-details__button:hover,
+.font-details__button:focus-visible {
+  opacity: 0.8;
+}
+
+.font-details__button--disabled {
+  cursor: not-allowed;
+}
+
 /*** Share Fonts Call to Action ***/
 
 .share_fonts {
@@ -691,6 +766,15 @@ html[data-color-mode="light"] .font-card__button--primary {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .font-details__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .font-details__actions {
+    min-height: 110px;
+    padding: 1.25rem;
+  }
+
   .share-fonts {
     align-items: flex-start;
     flex-direction: column;
@@ -716,6 +800,10 @@ html[data-color-mode="light"] .font-card__button--primary {
 
 @media (min-width: 481px) and (max-width: 991px) {
   .font-box-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .font-details__gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

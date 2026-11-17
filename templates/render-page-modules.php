@@ -105,6 +105,9 @@ while (have_rows('page_modules')) : the_row();
 
     case 'play_with_font':
       get_template_part('template-parts/flex/layout', 'play-with-font'); break;
+
+    case 'font_details':
+      get_template_part('template-parts/flex/layout', 'font-details'); break;
   }
 
   if (function_exists('section_close')) {
