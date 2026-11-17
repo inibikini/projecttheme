@@ -10,7 +10,7 @@ $categories = get_sub_field('filter_categories') ?: [
 $default_mode = get_sub_field('default_mode') ?: 'dark';
 $filter_id = function_exists('wp_unique_id') ? wp_unique_id('font-filter-') : 'font-filter';
 ?>
-<section class="filter-section" data-default-mode="<?php echo esc_attr($default_mode); ?>" aria-label="<?php esc_attr_e('Font filters', 'projecttheme'); ?>">
+<div class="filter-section" data-default-mode="<?php echo esc_attr($default_mode); ?>">
   <div class="filter-section__inner">
     <div class="filter-section__categories" role="group" aria-label="<?php esc_attr_e('Filter fonts by category', 'projecttheme'); ?>">
       <?php foreach ($categories as $category) :
@@ -33,4 +33,4 @@ $filter_id = function_exists('wp_unique_id') ? wp_unique_id('font-filter-') : 'f
       <span><?php esc_html_e('Light Mode', 'projecttheme'); ?></span>
     </label>
   </div>
-</section>
+</div>

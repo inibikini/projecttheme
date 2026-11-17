@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .split(/[\s,]+/)
             .filter(Boolean);
 
-          item.hidden = Boolean(selectedValue) && !itemCategories.includes(selectedValue);
+          item.classList.toggle('filter-section__item-hidden', Boolean(selectedValue) && !itemCategories.includes(selectedValue));
         });
 
         document.dispatchEvent(new CustomEvent('projecttheme:font-filter-change', {
