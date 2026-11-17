@@ -13,7 +13,7 @@
 
 #content {
   min-height: 100vh;
-  background-color: var(--theme-color-whiteblue);
+  background-color: var(--theme-color-white);
 }
 
 body {
