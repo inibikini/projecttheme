@@ -14,8 +14,8 @@ while (have_rows('page_modules')) : the_row();
   // Section-Optionen 
   $opts = [
     'name'       => $layout,
-    'container'  => in_array($layout, ['header', 'filter_section', 'enter_text'], true) ? 'none' : (get_sub_field('container') ?: 'container-lg'),
-    'padding_y'  => in_array($layout, ['header', 'filter_section', 'enter_text', 'share_fonts'], true) ? 'py-0' : (get_sub_field('padding_y') ?: 'py-5'),
+    'container'  => in_array($layout, ['header', 'filter_section', 'enter_text', 'footer'], true) ? 'none' : (get_sub_field('container') ?: 'container-lg'),
+    'padding_y'  => in_array($layout, ['header', 'filter_section', 'enter_text', 'share_fonts', 'footer'], true) ? 'py-0' : (get_sub_field('padding_y') ?: 'py-5'),
     'bg'         => get_sub_field('background') ?: 'none',
     'id'         => get_sub_field('id-anchor') ?: '',
     'show_on'    => get_sub_field('show-on') ?: 'everywhere',
@@ -99,6 +99,12 @@ while (have_rows('page_modules')) : the_row();
 
     case 'share_fonts':
       get_template_part('template-parts/flex/layout', 'share-fonts'); break;
+
+    case 'footer':
+      get_template_part('template-parts/flex/layout', 'footer'); break;
+
+    case 'play_with_font':
+      get_template_part('template-parts/flex/layout', 'play-with-font'); break;
   }
 
   if (function_exists('section_close')) {

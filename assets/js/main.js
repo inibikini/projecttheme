@@ -1,6 +1,7 @@
 import './menu.js';
 import './filter-section.js';
 import './enter-text.js';
+import './play-with-font.js';
 
 class General {
 	constructor() {
