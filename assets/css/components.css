@@ -1007,15 +1007,15 @@ html[data-color-mode="light"] .fym-card::after {
 }
 
 .fym-card-actions__button--reject {
-  background-color: #000;
-  border: 1px solid #cbd2e0;
+  background-color: #69799a;
+  border: 1px solid #69799a;
   color: #cbd2e0;
 }
 
 .fym-card-actions__button--like {
-  background-color: #000;
+  background-color: #cbd2e0;
   border: 1px solid #cbd2e0;
-  color: #cbd2e0;
+  color: #000;
 }
 
 .fym-card-actions__button svg {
@@ -1060,15 +1060,15 @@ html[data-color-mode="light"] .fym_card {
 }
 
 html[data-color-mode="light"] .fym-card-actions__button--reject {
-  background-color: #202020;
-  border-color: #202020;
-  color: #f1f1f1;
+  background-color: #cbd2e0;
+  border-color: #cbd2e0;
+  color: #69799a;
 }
 
 html[data-color-mode="light"] .fym-card-actions__button--like {
-  background-color: #eef1f5;
-  border-color: #202020;
-  color: #202020;
+  background-color: #000;
+  border-color: #000;
+  color: #cbd2e0;
 }
 
 @media (max-width: 767.98px) {

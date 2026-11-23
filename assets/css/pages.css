@@ -3,3 +3,80 @@
  *
  * Add page-specific theme styles here.
  */
+
+html[data-color-mode] body.page-id-153 {
+  background-color: transparent;
+}
+
+html[data-color-mode] body.page-id-153 #page {
+  isolation: isolate;
+}
+
+.page-id-153 .fym-page-background {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+.fym-page-background::after {
+  background: linear-gradient(rgba(7, 12, 24, 0.5), rgba(7, 12, 24, 0.62));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.fym-page-background video {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+html[data-color-mode] body.page-id-153 #masthead,
+html[data-color-mode] body.page-id-153 #content,
+html[data-color-mode] body.page-id-153 .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-color-mode] body.page-id-153 #masthead {
+  z-index: 1001;
+}
+
+html[data-color-mode] body.page-id-153 .fym_heading {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-color-mode] body.page-id-153 .fym-card-stack {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-color-mode] body.page-id-153 .fym-card {
+  background-color: transparent;
+}
+
+html[data-color-mode] body.page-id-153 .fym-card::after {
+  background: transparent;
+}
+
+html[data-color-mode] body.page-id-153 .fym-card-actions {
+  position: relative;
+  z-index: 2;
+}
+
+html[data-color-mode] body.page-id-153 #masthead,
+html[data-color-mode] body.page-id-153 #content,
+html[data-color-mode] body.page-id-153 .fym_heading,
+html[data-color-mode] body.page-id-153 .fym_card,
+html[data-color-mode] body.page-id-153 .site-footer {
+  background-color: transparent;
+}
+
+html[data-color-mode="light"] .page-id-153 .fym-page-background::after {
+  background: linear-gradient(rgba(241, 241, 241, 0.52), rgba(241, 241, 241, 0.72));
+}
