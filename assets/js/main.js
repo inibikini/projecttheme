@@ -2,6 +2,7 @@ import './menu.js';
 import './filter-section.js';
 import './enter-text.js';
 import './play-with-font.js';
+import './find-your-match.js';
 
 class General {
 	constructor() {

@@ -810,7 +810,7 @@ html[data-color-mode="light"] .fym_heading {
 /*** Find Your Match Font Card ***/
 
 .fym_card {
-  background-color: #111b2b;
+  background-color: #000;
   color: #cbd2e0;
   padding-bottom: 5rem;
   padding-top: clamp(2rem, 4vw, 3rem);
@@ -843,22 +843,47 @@ html[data-color-mode="light"] .fym-card::after {
   width: 100%;
 }
 
+.fym-card-stack {
+  max-width: 640px;
+  position: relative;
+  touch-action: pan-y;
+  width: 100%;
+}
+
 .fym-card {
   align-items: center;
-  background-color: #26344a;
+  background-color: #000;
   border: 1px solid rgba(200, 207, 221, 0.75);
-  border-radius: 2.5rem;
+  border-radius: clamp(2rem, 8vw, 4rem);
   aspect-ratio: 1;
   color: #cbd2e0;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 100%;
   overflow: hidden;
   padding: clamp(1.5rem, 5vw, 3.5rem);
   position: relative;
   text-align: center;
   width: 100%;
+  transition: transform 320ms ease, opacity 320ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+  will-change: transform, opacity;
+}
+
+.fym-card[hidden] {
+  display: none;
+}
+
+.fym-card.is-rejecting {
+  opacity: 0;
+  transform: translateX(-120%) rotate(-12deg);
+}
+
+.fym-card.is-liking {
+  opacity: 0;
+  transform: translateX(120%) rotate(12deg);
 }
 
 .fym-card::after {
@@ -923,6 +948,11 @@ html[data-color-mode="light"] .fym-card::after {
   font-family: "Departure Mono", ui-monospace, monospace;
 }
 
+.fym-card[data-font-family="departure-mono"] .fym-card__font-name {
+  margin-inline: auto;
+  max-width: 10ch;
+}
+
 .fym-card[data-font-family="alex-brush"] .fym-card__content {
   font-family: "Alex Brush", cursive;
 }
@@ -948,6 +978,11 @@ html[data-color-mode="light"] .fym-card::after {
   width: 100%;
 }
 
+.fym-card-actions[hidden],
+.fym-card-complete[hidden] {
+  display: none;
+}
+
 .fym-card-actions__button {
   align-items: center;
   border: 0;
@@ -967,18 +1002,20 @@ html[data-color-mode="light"] .fym-card::after {
 }
 
 .fym-card-actions__button:focus-visible {
-  outline: 3px solid #fff;
+  outline: 3px solid currentColor;
   outline-offset: 4px;
 }
 
 .fym-card-actions__button--reject {
-  background-color: #69799a;
-  color: #fff;
+  background-color: #000;
+  border: 1px solid #cbd2e0;
+  color: #cbd2e0;
 }
 
 .fym-card-actions__button--like {
-  background-color: #cbd2e0;
-  color: #000;
+  background-color: #000;
+  border: 1px solid #cbd2e0;
+  color: #cbd2e0;
 }
 
 .fym-card-actions__button svg {
@@ -994,6 +1031,63 @@ html[data-color-mode="light"] .fym-card::after {
 .fym-card-actions__button--like svg {
   fill: currentColor;
   stroke-width: 1;
+}
+
+.fym-card-status,
+.fym-card-complete {
+  color: inherit;
+  font-family: var(--theme-font-family-body);
+  margin: 0;
+  text-align: center;
+}
+
+.fym-card-restart {
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.65rem 1.5rem;
+}
+
+.fym-card-restart:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+html[data-color-mode="light"] .fym_card {
+  background-color: #c8cfdd;
+}
+
+html[data-color-mode="light"] .fym-card-actions__button--reject {
+  background-color: #202020;
+  border-color: #202020;
+  color: #f1f1f1;
+}
+
+html[data-color-mode="light"] .fym-card-actions__button--like {
+  background-color: #eef1f5;
+  border-color: #202020;
+  color: #202020;
+}
+
+@media (max-width: 767.98px) {
+  .fym-card-actions {
+    height: 96px;
+  }
+
+  .fym-card-actions__button {
+    height: 76px;
+    padding: 1rem;
+    width: 76px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fym-card,
+  .fym-card-actions__button {
+    transition-duration: 1ms;
+  }
 }
 
 /*** Share Fonts Contact Form ***/

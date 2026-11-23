@@ -2150,6 +2150,204 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_fym_card_cards",
+                            "label": "Font Cards",
+                            "name": "cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "The cards appear in this order. Liking a card opens its font homepage.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "row",
+                            "pagination": 0,
+                            "min": 1,
+                            "max": 8,
+                            "collapsed": "field_fym_card_item_name",
+                            "button_label": "Add Font Card",
+                            "rows_per_page": 20,
+                            "default_value": [
+                                {
+                                    "font_name": "Alex Brush",
+                                    "font_family": "alex-brush",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "abc",
+                                    "homepage": "https://www.1001fonts.com/alex-brush-font.html"
+                                },
+                                {
+                                    "font_name": "Chillax",
+                                    "font_family": "chillax",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "abc",
+                                    "homepage": "https://www.fontshare.com/fonts/chillax"
+                                },
+                                {
+                                    "font_name": "Gluten",
+                                    "font_family": "gluten",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "abc",
+                                    "homepage": "https://fonts.google.com/specimen/Gluten"
+                                },
+                                {
+                                    "font_name": "Departure Mono",
+                                    "font_family": "departure-mono",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "abc",
+                                    "homepage": "https://departuremono.com/"
+                                },
+                                {
+                                    "font_name": "FoglihtenNo04",
+                                    "font_family": "foglihten-no04",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "abc",
+                                    "homepage": "https://www.fontspace.com/foglihtenno04-font-f13878"
+                                },
+                                {
+                                    "font_name": "TANKER",
+                                    "font_family": "tanker",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "ABC",
+                                    "homepage": "https://www.fontshare.com/fonts/tanker"
+                                },
+                                {
+                                    "font_name": "Josefin Slab",
+                                    "font_family": "josefin-slab",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "abc",
+                                    "homepage": "https://www.1001fonts.com/josefin-slab-font.html"
+                                },
+                                {
+                                    "font_name": "Bullpen",
+                                    "font_family": "bullpen",
+                                    "sample_numbers": "123",
+                                    "sample_letters": "abc",
+                                    "homepage": "https://befonts.com/bullpen-font.html"
+                                }
+                            ],
+                            "sub_fields": [
+                                {
+                                    "key": "field_fym_card_item_name",
+                                    "label": "Font Name",
+                                    "name": "font_name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_fym_card_cards"
+                                },
+                                {
+                                    "key": "field_fym_card_item_family",
+                                    "label": "Font",
+                                    "name": "font_family",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "general-sans": "General Sans",
+                                        "moonhouse": "Moonhouse",
+                                        "foglihten-no04": "FoglihtenNo04",
+                                        "tanker": "Tanker",
+                                        "josefin-slab": "Josefin Slab",
+                                        "departure-mono": "Departure Mono",
+                                        "alex-brush": "Alex Brush",
+                                        "gluten": "Gluten",
+                                        "chillax": "Chillax",
+                                        "bullpen": "Bullpen"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 1,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "parent_repeater": "field_fym_card_cards"
+                                },
+                                {
+                                    "key": "field_fym_card_item_numbers",
+                                    "label": "Number Sample",
+                                    "name": "sample_numbers",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "123",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_fym_card_cards"
+                                },
+                                {
+                                    "key": "field_fym_card_item_letters",
+                                    "label": "Letter Sample",
+                                    "name": "sample_letters",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "abc",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_fym_card_cards"
+                                },
+                                {
+                                    "key": "field_fym_card_item_homepage",
+                                    "label": "Font Homepage",
+                                    "name": "homepage",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "The Like button opens this URL.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_fym_card_cards"
+                                }
+                            ]
+                        },
+                        {
                             "key": "field_fym_card_font_name",
                             "label": "Font Name",
                             "name": "font_name",
@@ -2954,5 +3152,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1795457182
+    "modified": 1795464971
 }
