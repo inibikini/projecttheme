@@ -754,26 +754,47 @@ html[data-color-mode="light"] .fym_heading {
 
 .fym_card {
   background-color: #111b2b;
-  padding-bottom: clamp(2rem, 4vw, 3rem);
+  color: #cbd2e0;
+  padding-bottom: 5rem;
   padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.fym_card > .container-lg {
+  max-width: 1332px;
+}
+
+.fym-card-module {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
 }
 
 .fym-card {
   align-items: center;
   background-color: #26344a;
   border: 1px solid rgba(200, 207, 221, 0.75);
-  border-radius: 2rem;
+  border-radius: 2.5rem;
+  aspect-ratio: 1;
   color: #cbd2e0;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 310px;
-  min-height: 306px;
+  max-width: 750px;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
   position: relative;
   text-align: center;
   width: 100%;
+}
+
+.fym-card::after {
+  background: linear-gradient(rgba(8, 15, 27, 0.08), rgba(8, 15, 27, 0.16));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .fym-card__background {
@@ -782,20 +803,22 @@ html[data-color-mode="light"] .fym_heading {
   object-fit: cover;
   position: absolute;
   width: 100%;
+  z-index: 0;
 }
 
 .fym-card__content {
   position: relative;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .fym-card__font-name,
 .fym-card__sample {
   color: inherit;
-  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-family: inherit;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
   margin: 0;
   overflow-wrap: anywhere;
 }
@@ -804,20 +827,101 @@ html[data-color-mode="light"] .fym_heading {
   margin-bottom: 0.15rem;
 }
 
-.fym-card.font-card--general-sans .fym-card__content {
+.fym-card[data-font-family="general-sans"] .fym-card__content {
   font-family: "General Sans", sans-serif;
 }
 
-.fym-card.font-card--moonhouse .fym-card__content {
+.fym-card[data-font-family="moonhouse"] .fym-card__content {
   font-family: "Moonhouse", sans-serif;
 }
 
-.fym-card.font-card--foglihten-no04 .fym-card__content {
+.fym-card[data-font-family="foglihten-no04"] .fym-card__content {
   font-family: "FoglihtenNo04", serif;
 }
 
-.fym-card.font-card--tanker .fym-card__content {
+.fym-card[data-font-family="tanker"] .fym-card__content {
   font-family: "Tanker", sans-serif;
+}
+
+.fym-card[data-font-family="josefin-slab"] .fym-card__content {
+  font-family: "Josefin Slab", Georgia, serif;
+}
+
+.fym-card[data-font-family="departure-mono"] .fym-card__content {
+  font-family: "Departure Mono", ui-monospace, monospace;
+}
+
+.fym-card[data-font-family="alex-brush"] .fym-card__content {
+  font-family: "Alex Brush", cursive;
+}
+
+.fym-card[data-font-family="gluten"] .fym-card__content {
+  font-family: "Gluten", sans-serif;
+}
+
+.fym-card[data-font-family="chillax"] .fym-card__content {
+  font-family: "Chillax", sans-serif;
+}
+
+.fym-card[data-font-family="bullpen"] .fym-card__content {
+  font-family: "Bullpen", sans-serif;
+}
+
+.fym-card-actions {
+  align-items: center;
+  display: flex;
+  gap: clamp(1.25rem, 4vw, 3.625rem);
+  height: 134px;
+  justify-content: center;
+  width: 100%;
+}
+
+.fym-card-actions__button {
+  align-items: center;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  height: 112px;
+  justify-content: center;
+  padding: 1.25rem;
+  transition: transform 160ms ease, filter 160ms ease;
+  width: 112px;
+}
+
+.fym-card-actions__button:hover {
+  filter: brightness(1.08);
+  transform: scale(1.05);
+}
+
+.fym-card-actions__button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.fym-card-actions__button--reject {
+  background-color: #69799a;
+  color: #fff;
+}
+
+.fym-card-actions__button--like {
+  background-color: #cbd2e0;
+  color: #000;
+}
+
+.fym-card-actions__button svg {
+  fill: none;
+  height: 100%;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 6;
+  width: 100%;
+}
+
+.fym-card-actions__button--like svg {
+  fill: currentColor;
+  stroke-width: 1;
 }
 
 /*** Share Fonts Contact Form ***/
@@ -1158,6 +1262,20 @@ html[data-color-mode="light"] .font-card__button--primary {
 
   .fym-heading__title {
     font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+
+  .fym-card {
+    border-radius: 1.5rem;
+  }
+
+  .fym-card-actions {
+    height: 100px;
+  }
+
+  .fym-card-actions__button {
+    height: 72px;
+    padding: 1rem;
+    width: 72px;
   }
 
   .share-fonts-form__panel {

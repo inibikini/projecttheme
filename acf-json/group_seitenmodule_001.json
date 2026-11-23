@@ -167,6 +167,68 @@
                     "acfe_flexible_settings_size": false,
                     "acfe_flexible_modal_edit_size": false
                 },
+                "layout_about": {
+                    "key": "layout_about",
+                    "name": "about",
+                    "label": "About",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_about_title",
+                            "label": "Titel",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "About",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_about_description",
+                            "label": "Description",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "<p>What's Your Type? is a space for type lovers, curious creatives, and anyone searching for the perfect font. Discover unique typefaces submitted by our community, explore their stories, experiment with their shapes, and download your favourites. Every font has its own personality, and we're here to help you find it. Not sure which type suits your next project? Head over to Find Your Match and swipe your way through fonts like on a dating app — match, explore, and find the right type for your creative process.</p>",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Inhalte"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
                 "layout_breaker": {
                     "key": "layout_breaker",
                     "name": "breaker",
@@ -2081,6 +2143,152 @@
                     "acfe_flexible_settings_size": false,
                     "acfe_flexible_modal_edit_size": false
                 },
+                "layout_fym_card": {
+                    "key": "layout_fym_card",
+                    "name": "fym_card",
+                    "label": "FYM Card",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_fym_card_font_name",
+                            "label": "Font Name",
+                            "name": "font_name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "The title shown on the font card.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Moonhouse",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_fym_card_font_family",
+                            "label": "Font",
+                            "name": "font_family",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Uses a font already bundled with the theme.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "general-sans": "General Sans",
+                                "moonhouse": "Moonhouse",
+                                "foglihten-no04": "FoglihtenNo04",
+                                "tanker": "Tanker",
+                                "josefin-slab": "Josefin Slab",
+                                "departure-mono": "Departure Mono",
+                                "alex-brush": "Alex Brush",
+                                "gluten": "Gluten",
+                                "chillax": "Chillax",
+                                "bullpen": "Bullpen"
+                            },
+                            "default_value": "moonhouse",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_fym_card_sample_numbers",
+                            "label": "Number Sample",
+                            "name": "sample_numbers",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "123",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_fym_card_sample_letters",
+                            "label": "Letter Sample",
+                            "name": "sample_letters",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "abc",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_fym_card_background_image",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Optional background image for the font card.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Interaktive Elemente"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": false,
+                    "acfe_flexible_modal_edit_size": false
+                },
                 "layout_footer": {
                     "key": "layout_footer",
                     "name": "footer",
@@ -2746,5 +2954,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1794949228
+    "modified": 1795457182
 }

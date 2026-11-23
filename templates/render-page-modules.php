@@ -14,8 +14,8 @@ while (have_rows('page_modules')) : the_row();
   // Section-Optionen 
   $opts = [
     'name'       => $layout,
-    'container'  => in_array($layout, ['header', 'filter_section', 'enter_text', 'footer'], true) ? 'none' : (get_sub_field('container') ?: 'container-lg'),
-    'padding_y'  => in_array($layout, ['header', 'filter_section', 'enter_text', 'share_fonts', 'footer'], true) ? 'py-0' : (get_sub_field('padding_y') ?: 'py-5'),
+    'container'  => in_array($layout, ['header', 'filter_section', 'enter_text', 'about', 'footer'], true) ? 'none' : (get_sub_field('container') ?: 'container-lg'),
+    'padding_y'  => in_array($layout, ['header', 'filter_section', 'enter_text', 'share_fonts', 'about', 'footer'], true) ? 'py-0' : (get_sub_field('padding_y') ?: 'py-5'),
     'bg'         => get_sub_field('background') ?: 'none',
     'id'         => get_sub_field('id-anchor') ?: '',
     'show_on'    => get_sub_field('show-on') ?: 'everywhere',
@@ -34,6 +34,9 @@ while (have_rows('page_modules')) : the_row();
   }
 
   switch ($layout) {
+    case 'about':
+      get_template_part('template-parts/flex/layout', 'about'); break;
+
     case 'enter_text':
       get_template_part('template-parts/flex/layout', 'enter-text'); break;
 
@@ -105,6 +108,9 @@ while (have_rows('page_modules')) : the_row();
 
     case 'fym_heading':
       get_template_part('template-parts/flex/layout', 'fym-heading'); break;
+
+    case 'fym_card':
+      get_template_part('template-parts/flex/layout', 'fym-card'); break;
 
     case 'footer':
       get_template_part('template-parts/flex/layout', 'footer'); break;
