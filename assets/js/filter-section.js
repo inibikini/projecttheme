@@ -5,15 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
+  const storageKey = 'projecttheme-color-mode';
+
+  const cookieMode = document.cookie.match(/(?:^|; )projecttheme_color_mode=(dark|light)(?:;|$)/);
+  const storedMode = localStorage.getItem(storageKey) || (cookieMode && cookieMode[1]);
+  const getInitialMode = () => {
+    if (storedMode === 'light' || storedMode === 'dark') {
+      return storedMode;
+    }
+    return sections[0].dataset.defaultMode === 'light' ? 'light' : 'dark';
+  };
+
   const setColorMode = (mode) => {
     document.documentElement.dataset.colorMode = mode;
+    localStorage.setItem(storageKey, mode);
+    document.cookie = `projecttheme_color_mode=${mode};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
 
     sections.forEach((section) => {
       section.querySelector('.filter-section__mode-input').checked = mode === 'light';
     });
   };
 
-  const initialMode = sections[0].dataset.defaultMode === 'light' ? 'light' : 'dark';
+  const initialMode = getInitialMode();
   setColorMode(initialMode);
 
   sections.forEach((section) => {

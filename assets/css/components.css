@@ -222,6 +222,42 @@ html[data-color-mode="dark"] #content {
   color: #f1f1f1;
 }
 
+html[data-color-mode="dark"] .filter-section__mode > span:first-child,
+html[data-color-mode="light"] .filter-section__mode > span:last-child {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+html[data-color-mode="dark"] .filter-section__mode > span:last-child,
+html[data-color-mode="light"] .filter-section__mode > span:first-child {
+  opacity: 0.55;
+}
+
+html[data-color-mode="light"] .page-header {
+  background-color: #c8cfdd;
+  background-image: radial-gradient(ellipse at 32% 28%, #eef1f5 0%, #dbe0e8 48%, #c8cfdd 100%);
+  color: #202020;
+}
+
+html[data-color-mode="light"] .page-header::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-color-mode="light"] .page-header__text {
+  color: #30343a;
+}
+
+html[data-color-mode="light"] .page-header__cta {
+  border-color: rgba(32, 32, 32, 0.75);
+}
+
+html[data-color-mode="light"] .page-header__cta:hover,
+html[data-color-mode="light"] .page-header__cta:focus-visible {
+  background-color: #202020;
+  color: #fff;
+}
+
 /*** Font Sample Input ***/
 
 .enter-text {
@@ -551,6 +587,25 @@ html[data-color-mode="light"] .font-box {
   cursor: not-allowed;
 }
 
+html[data-color-mode="light"] .font_details {
+  background-color: #f1f1f1;
+  color: #202020;
+}
+
+html[data-color-mode="light"] .font-details__title {
+  color: #202020;
+}
+
+html[data-color-mode="light"] .font-details__item {
+  border-color: rgba(32, 32, 32, 0.55);
+}
+
+html[data-color-mode="light"] .font-details__button {
+  background-color: #202020;
+  border-color: #202020;
+  color: #fff;
+}
+
 /*** Share Fonts Call to Action ***/
 
 .share_fonts {
@@ -680,15 +735,15 @@ html[data-color-mode="light"] .share-fonts__button:focus-visible {
 }
 
 html[data-color-mode="light"] .about {
-  background-color: #000;
-  color: #cbd2e0;
+  background-color: #f1f1f1;
+  color: #202020;
 }
 
 /*** Find Your Match Heading ***/
 
 .fym_heading {
-  background-color: #f1f1f1;
-  color: #000;
+  background-color: #0c0c0c;
+  color: #cbd2e0;
   padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
   padding-top: clamp(2.5rem, 5vw, 4.5rem);
 }
@@ -757,6 +812,21 @@ html[data-color-mode="light"] .fym_heading {
   color: #cbd2e0;
   padding-bottom: 5rem;
   padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+html[data-color-mode="light"] .fym_card {
+  background-color: #c8cfdd;
+  color: #202020;
+}
+
+html[data-color-mode="light"] .fym-card {
+  background-color: #eef1f5;
+  border-color: rgba(32, 32, 32, 0.6);
+  color: #202020;
+}
+
+html[data-color-mode="light"] .fym-card::after {
+  background: linear-gradient(rgba(238, 241, 245, 0.08), rgba(238, 241, 245, 0.24));
 }
 
 .fym_card > .container-lg {
@@ -1052,8 +1122,34 @@ html[data-color-mode="light"] .fym_heading {
 }
 
 html[data-color-mode="light"] .share_fonts_form {
-  background-color: #000;
-  color: #cbd2e0;
+  background-color: #f1f1f1;
+  color: #202020;
+}
+
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__panel,
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__submit-panel {
+  border-color: rgba(32, 32, 32, 0.55);
+}
+
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__field {
+  border-bottom-color: rgba(32, 32, 32, 0.55);
+}
+
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__field input:focus-visible,
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__field textarea:focus-visible {
+  outline-color: #202020;
+}
+
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__button {
+  background-color: #202020;
+  border-color: #202020;
+  color: #fff;
+}
+
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__button:hover,
+html[data-color-mode="light"] .share_fonts_form .share-fonts-form__button:focus-visible {
+  background-color: transparent;
+  color: #202020;
 }
 
 .font-card {

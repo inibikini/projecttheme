@@ -44,8 +44,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: white;
-  }
+      background: #0c0c0c;
+      color: #cbd2e0;
+    }
+
+    html[data-color-mode="light"] #site-navigation.is-open {
+      background: #f1f1f1;
+      color: #202020;
+    }
 
   .menu-toggle {
     display: flex;

@@ -1,8 +1,27 @@
 <?php
-
 /**
  * Enqueue the theme's directly editable CSS and JavaScript files.
  */
+function projecttheme_set_initial_color_mode() {
+?>
+<script>
+  (function () {
+    var mode = 'dark';
+    try {
+      var storedMode = localStorage.getItem('projecttheme-color-mode');
+      var cookieMode = document.cookie.match(/(?:^|; )projecttheme_color_mode=(dark|light)(?:;|$)/);
+      storedMode = storedMode || (cookieMode && cookieMode[1]);
+      if (storedMode === 'light' || storedMode === 'dark') {
+        mode = storedMode;
+      }
+    } catch (error) {}
+    document.documentElement.dataset.colorMode = mode;
+  })();
+</script>
+<?php
+}
+add_action('wp_head', 'projecttheme_set_initial_color_mode', 1);
+
 function projecttheme_enqueue_assets() {
 	$theme_path = get_template_directory();
 	$theme_uri  = get_template_directory_uri();
