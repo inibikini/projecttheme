@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateFontSamples = (value) => {
     document.querySelectorAll('[data-font-sample]').forEach((sample) => {
-      sample.textContent = value || sample.dataset.originalText || '';
+      const sampleValue = value || sample.dataset.originalText || '';
+      sample.textContent = sample.closest('.font-box')
+        ? sampleValue.slice(0, 4)
+        : sampleValue;
     });
 
     document.dispatchEvent(new CustomEvent('projecttheme:font-sample-change', {
