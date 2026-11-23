@@ -612,8 +612,12 @@ html[data-color-mode="light"] .font-details__button {
 /*** Share Fonts Call to Action ***/
 
 .share_fonts {
-  border-bottom: 1px solid #148ee8;
-  border-top: 1px solid #148ee8;
+  border-bottom: 1px solid #cbd2e0;
+  border-top: 0;
+}
+
+html[data-color-mode="light"] .share_fonts {
+  border-bottom-color: #000;
 }
 
 .share-fonts {
