@@ -1006,7 +1006,6 @@ html[data-color-mode="light"] .fym-card::after {
 }
 
 .share-fonts-form__panel {
-  border: 2px solid #69799a;
   display: grid;
   gap: clamp(1.5rem, 4vw, 3.5rem);
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
@@ -1080,7 +1079,6 @@ html[data-color-mode="light"] .fym-card::after {
 
 .share-fonts-form__submit-panel {
   align-items: center;
-  border: 2px solid #69799a;
   display: flex;
   gap: 1.5rem;
   justify-content: flex-end;
@@ -1126,11 +1124,6 @@ html[data-color-mode="light"] .fym-card::after {
 html[data-color-mode="light"] .share_fonts_form {
   background-color: #f1f1f1;
   color: #202020;
-}
-
-html[data-color-mode="light"] .share_fonts_form .share-fonts-form__panel,
-html[data-color-mode="light"] .share_fonts_form .share-fonts-form__submit-panel {
-  border-color: rgba(32, 32, 32, 0.55);
 }
 
 html[data-color-mode="light"] .share_fonts_form .share-fonts-form__field {
