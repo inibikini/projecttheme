@@ -47,22 +47,48 @@ body.home #masthead {
   background-color: transparent;
 }
 
+html[data-color-mode="light"] body.home #masthead {
+  background-color: transparent;
+}
+
 body.home .page-header {
   overflow: visible;
+  position: static;
+}
+
+body.home #content {
+  position: relative;
 }
 
 body.home .page-header::before {
+  bottom: auto;
+  height: calc(var(--home-header-height) + min(850px, calc(100svh - 80px)));
   top: calc(-1 * var(--home-header-height));
 }
 
 body.home .page-header__video {
-  height: calc(100% + var(--home-header-height));
+  height: calc(var(--home-header-height) + min(850px, calc(100svh - 80px)));
+  left: 0;
   top: calc(-1 * var(--home-header-height));
+}
+
+html[data-color-mode="light"] body.home .page-header::before {
+  background: linear-gradient(rgba(241, 241, 241, 0.52), rgba(241, 241, 241, 0.72));
 }
 
 @media (max-width: 766.98px) {
   body.home {
     --home-header-height: 68px;
+  }
+
+  body.home .page-header::before {
+    height: min(850px, calc(100svh - 80px));
+    top: 0;
+  }
+
+  body.home .page-header__video {
+    height: min(850px, calc(100svh - 80px));
+    top: 0;
   }
 }
 
