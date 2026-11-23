@@ -1169,6 +1169,12 @@ html[data-color-mode="light"] .share_fonts_form .share-fonts-form__button:focus-
   width: 100%;
 }
 
+.font-card:hover,
+.font-card:focus-within {
+  background-color: transparent;
+  border-color: rgba(200, 207, 221, 0.75);
+}
+
 .font-card::after {
   background: linear-gradient(rgba(8, 15, 27, 0.28), rgba(8, 15, 27, 0.55));
   content: "";
@@ -1177,12 +1183,23 @@ html[data-color-mode="light"] .share_fonts_form .share-fonts-form__button:focus-
   position: absolute;
 }
 
+.font-card:hover::after,
+.font-card:focus-within::after {
+  background: transparent;
+}
+
 .font-card__background {
   height: 100%;
   inset: 0;
   object-fit: cover;
   position: absolute;
   width: 100%;
+}
+
+.font-card:hover .font-card__background,
+.font-card:focus-within .font-card__background {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .font-card__content {
@@ -1259,8 +1276,19 @@ html[data-color-mode="light"] .font-card {
   color: #202020;
 }
 
+html[data-color-mode="light"] .font-card:hover,
+html[data-color-mode="light"] .font-card:focus-within {
+  background-color: transparent;
+  border-color: rgba(32, 32, 32, 0.6);
+}
+
 html[data-color-mode="light"] .font-card::after {
   background: linear-gradient(rgba(236, 238, 242, 0.3), rgba(236, 238, 242, 0.62));
+}
+
+html[data-color-mode="light"] .font-card:hover::after,
+html[data-color-mode="light"] .font-card:focus-within::after {
+  background: transparent;
 }
 
 html[data-color-mode="light"] .font-card__button {
