@@ -136,3 +136,24 @@
     text-align: center;
   }
 }
+
+@media (min-width: 767px) {
+  #site-navigation .main-menu {
+    align-items: center;
+    column-gap: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #site-navigation .main-menu > .menu-item-home,
+  #site-navigation .main-menu > li:has(> a[href*="/styleguide/"]) {
+    display: none;
+  }
+
+  #site-navigation .main-menu > li:last-child a {
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    display: inline-flex;
+    padding: 0.55rem 1.5rem;
+  }
+}

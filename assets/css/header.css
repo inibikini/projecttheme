@@ -23,7 +23,20 @@ html[data-color-mode="light"] header {
 @media (min-width: 767px) {
   header {
     position: relative;
-  padding: 2rem 3rem;
+    padding: 2rem 3rem;
+  }
+
+  .site-header {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+
+  .site-branding {
+    grid-column: 1;
+  }
+
+  .site-header #site-navigation {
+    grid-column: 2;
   }
 }
 
