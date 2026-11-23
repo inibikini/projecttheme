@@ -2155,7 +2155,7 @@
                             "name": "cards",
                             "aria-label": "",
                             "type": "repeater",
-                            "instructions": "The cards appear in this order. Liking a card opens its font homepage.",
+                            "instructions": "Each row is one swipe card, shown in this order. Liking a card opens its homepage. Leave the list empty to use the eight built-in cards.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2165,7 +2165,7 @@
                             },
                             "layout": "row",
                             "pagination": 0,
-                            "min": 1,
+                            "min": 0,
                             "max": 8,
                             "collapsed": "field_fym_card_item_name",
                             "button_label": "Add Font Card",
@@ -2346,132 +2346,6 @@
                                     "parent_repeater": "field_fym_card_cards"
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_fym_card_font_name",
-                            "label": "Font Name",
-                            "name": "font_name",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "The title shown on the font card.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Moonhouse",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_fym_card_font_family",
-                            "label": "Font",
-                            "name": "font_family",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "Uses a font already bundled with the theme.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "general-sans": "General Sans",
-                                "moonhouse": "Moonhouse",
-                                "foglihten-no04": "FoglihtenNo04",
-                                "tanker": "Tanker",
-                                "josefin-slab": "Josefin Slab",
-                                "departure-mono": "Departure Mono",
-                                "alex-brush": "Alex Brush",
-                                "gluten": "Gluten",
-                                "chillax": "Chillax",
-                                "bullpen": "Bullpen"
-                            },
-                            "default_value": "moonhouse",
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "allow_in_bindings": 0,
-                            "ui": 1,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "create_options": 0,
-                            "save_options": 0
-                        },
-                        {
-                            "key": "field_fym_card_sample_numbers",
-                            "label": "Number Sample",
-                            "name": "sample_numbers",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "123",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_fym_card_sample_letters",
-                            "label": "Letter Sample",
-                            "name": "sample_letters",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "abc",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_fym_card_background_image",
-                            "label": "Background Image",
-                            "name": "background_image",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "Optional background image for the font card.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0
                         }
                     ],
                     "min": "",
@@ -3152,5 +3026,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1795464971
+    "modified": 1795466112
 }

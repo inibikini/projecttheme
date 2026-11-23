@@ -1,7 +1,12 @@
 <?php
 $cards = get_sub_field('cards');
+$cards = is_array($cards)
+  ? array_values(array_filter($cards, static function ($card) {
+    return is_array($card) && !empty($card['font_name']);
+  }))
+  : [];
 
-if (!is_array($cards) || !$cards) {
+if (!$cards) {
   $legacy_font_name = get_sub_field('font_name') ?: '';
   $legacy_font_family = get_sub_field('font_family') ?: '';
   $legacy_numbers = get_sub_field('sample_numbers') ?: '';
