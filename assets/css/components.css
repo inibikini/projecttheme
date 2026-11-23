@@ -39,6 +39,33 @@
   z-index: 0;
 }
 
+body.home {
+  --home-header-height: 100px;
+}
+
+body.home #masthead {
+  background-color: transparent;
+}
+
+body.home .page-header {
+  overflow: visible;
+}
+
+body.home .page-header::before {
+  top: calc(-1 * var(--home-header-height));
+}
+
+body.home .page-header__video {
+  height: calc(100% + var(--home-header-height));
+  top: calc(-1 * var(--home-header-height));
+}
+
+@media (max-width: 766.98px) {
+  body.home {
+    --home-header-height: 68px;
+  }
+}
+
 .page-header__content {
   max-width: 900px;
   position: relative;
